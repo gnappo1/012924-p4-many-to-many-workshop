@@ -21,7 +21,7 @@ db.init_app(app)
 
 @app.route('/')
 def index():
-    return '<h1>Code challenge</h1>'
+    return [ep.to_dict() for ep in Episode.query], 200
 
 
 
